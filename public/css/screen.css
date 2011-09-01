@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'OSPDIN';
+    src: url('fonts/OSP-DIN-webfont.eot');
+    src: url('fonts/OSP-DIN-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OSP-DIN-webfont.woff') format('woff'),
+         url('fonts/OSP-DIN-webfont.ttf') format('truetype'),
+         url('fonts/OSP-DIN-webfont.svg#OSPDIN') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  margin: 20px auto;
+  width: 760px;
+  font-family: OSPDIN, Palatino, "Lucida Grande", sans-serif;
+  font-size: 36px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+#content {
+  font-size: 24px;
+  text-align: left;
+}
+
+#content h1 {
+  font-size: 30px;
+}
+
+#content h2 {
+  font-size: 26px;
+}
+
+#content p {
+  margin: 20px 0;
+}
+
+ul#crumbs {
+  list-style-type: none;
+  font-size: 20px;
+  padding: 0;
+}
+
+ul#crumbs li {
+  display: inline;
+}
+
+p {
+    margin: 0;
+}
+
+.caps {
+  font-family: Impact, sans-serif;
+  color: rgb(166,33,46);
+  font-weight: normal;
+}
+
+.response {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: Impact, sans-serif;
+  font-size: 192px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, .75);
+}
+
+.home {
+  color: rgb(166, 33, 46);
+}
+
+.away {
+  color: rgb(9, 24, 50);
+}
+
+footer nav {
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+footer nav ul {
+  margin: 15px 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+footer nav ul li {
+  display: inline;
+  padding-right: 20px;
+}
+
+footer nav ul li.last {
+  padding-right: 0;
+  border-right: none;
+}
