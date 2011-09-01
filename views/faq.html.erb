@@ -1,0 +1,32 @@
+<%= erb :'_top.html' %>
+
+<div id="content">
+  <h1>FAQ</h1>
+
+  <ul id="crumbs">
+    <li><a href="/">Home</a> &raquo;</li>
+    <li>FAQ</li>
+  </ul>
+
+  <h2 id="start">How do you use this site?</h2>
+
+  <p>It&rsquo;s simple. Start at <a href="/">the homepage</a>, and you&rsquo;ll get an answer to the magic question: Is there a Caps game?</p>
+
+  <h2 id="today">Is that it?</h2>
+
+  <p>By default, you find out whether there&rsquo;s a Caps game <em>today</em>. If you want to do that more explicitly, you can visit <a href="/today">/today</a>.</p>
+
+  <h2 id="tomorrow">How about tomorrow?</h2>
+
+  <p>Yup. Just visit <a href="/tomorrow">/tomorrow</a>.</p>
+
+  <h2 id="day">Can I check for a specific day this week?</h2>
+
+  <p>Yup. If you want to find out whether there&rsquo;s a game on Thursday, just visit <a href="/thursday">/thursday</a>. Ditto for any other day of the week. (Note that this always looks <em>forward</em>. If it&rsquo;s Monday, and you visit <a href="/monday">/monday</a>, you&rsquo;ll find out whether there&rsquo;s a game next Monday.)</p>
+
+  <h2 id="date">Can I check for a specific date?</h2>
+
+  <p>Yup. Just enter the date in this format: YYYYMMDD. For example, try checking <a href="20110920">/20110920</a>.</p>
+</div>
+
+<%= erb :'_bottom.html' %>
