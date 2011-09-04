@@ -1,0 +1,1 @@
+class BadDate < StandardError; end

@@ -1,10 +1,21 @@
 require 'sinatra'
 require 'date'
 require 'erb'
+require_relative 'errors'
 require_relative 'helpers'
 require_relative 'schedule'
 
 class Caps < Sinatra::Base
+
+  not_found do
+    erb :boom
+  end
+
+  error BadDate do
+    status 400
+    erb :boom
+  end
+
   # Hit the index page looks up today
   before '/' do
     @date = get_today
@@ -45,7 +56,8 @@ class Caps < Sinatra::Base
   end
 
   get %r{/(\d{8})/?$} do
-    erb :'date.html'
+    raise BadDate if @date.nil?
+    erb :date
   end
 
   days = %w/monday tuesday wednesday thursday friday saturday sunday/
