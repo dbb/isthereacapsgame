@@ -14,6 +14,7 @@ body {
   width: 760px;
   font-family: OSPDIN, Palatino, "Lucida Grande", sans-serif;
   font-size: 36px;
+  color: rgb(9, 24, 50);
   line-height: 1.5;
   text-align: center;
 }
@@ -52,7 +53,6 @@ p {
 .caps {
   font-family: Impact, sans-serif;
   color: rgb(166,33,46);
-  font-weight: normal;
 }
 
 .response {
@@ -93,11 +93,14 @@ footer nav ul li.last {
   border-right: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 a:link, a:visited {
-  color: rgba(9, 24, 50, .90);
+  color: rgb(166, 33, 46);
 }
 
 a:hover, a:active {
   border-bottom: 2px solid;
-  text-decoration: none;
 }
