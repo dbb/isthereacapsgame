@@ -24,7 +24,8 @@ class TestRootPage < TestCapsApp
     if last_response.body.include?('YES!')
       assert @body.include?('Puck drops'), @body
     else
-      assert @body.include?('No luck.The next game is'), @body
+      assert @body.include?('No.'), @body
+      assert @body.include?('The next game is'), @body
     end
   end
 end
@@ -48,7 +49,7 @@ class TestTodayPage < TestCapsApp
     if last_response.body.include?('YES!')
       assert @body.include?('Puck drops')
     else
-      assert @body.include?('No luck.'), @body
+      assert @body.include?('No.'), @body
       assert @body.include?('The next game is'), @body
     end
   end
@@ -83,7 +84,7 @@ class TestGameToday < TestCapsApp
     get '/'
     doc = Nokogiri::HTML(last_response.body)
     body = doc.xpath('//text()').text
-    assert body.include?('No luck.')
+    assert body.include?('No.')
     assert body.include?('The next game is')
   end
 
