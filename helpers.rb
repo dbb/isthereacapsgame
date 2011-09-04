@@ -21,7 +21,11 @@ class Caps < Sinatra::Base
     end
 
     def get_by_string(wanted)
-      return DateTime.strptime(wanted, fmt="%Y%m%d")
+      begin
+        return DateTime.strptime(wanted, fmt="%Y%m%d")
+      rescue ArgumentError
+        return
+      end
     end
 
     def next_game_from(start)
