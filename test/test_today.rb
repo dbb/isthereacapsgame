@@ -24,7 +24,7 @@ class TestRootPage < TestCapsApp
     if last_response.body.include?('YES!')
       assert @body.include?('Puck drops'), @body
     else
-      assert @body.include?('No luck. The next game is'), @body
+      assert @body.include?('No luck.The next game is'), @body
     end
   end
 end
@@ -48,7 +48,8 @@ class TestTodayPage < TestCapsApp
     if last_response.body.include?('YES!')
       assert @body.include?('Puck drops')
     else
-      assert @body.include?('Nope. The next game is')
+      assert @body.include?('No luck.'), @body
+      assert @body.include?('The next game is'), @body
     end
   end
 end
