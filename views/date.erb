@@ -1,16 +1,4 @@
 <% wanted = @date.strftime("%B #{@date.day.ordinalize}") %>
 <p>Is there a <span class="caps">Caps</span> game on <%= wanted %>?</p>
 
-<% if SCHEDULE[@date] %>
-  <p class="response yes">YES!</p>
-<% if SCHEDULE[@date][2] == 'away' %>
-  <p class="away">But it&rsquo;s away.</p>
-<% end %>
-  <p><%= SCHEDULE[@date][0] %></p>
-  <p>Puck drops at <%= SCHEDULE[@date][1] %>.</p>
-<% else %>
-  <p class="response">No.</p>
-  <% next_game = next_game_from(@date) %>
-  <% pretty_next = next_game.strftime("%A, %B #{next_game.day.ordinalize}") %>
-  <p>The next game is <%= pretty_next %>.</p>
-<% end %>
+<%= erb :response %>
