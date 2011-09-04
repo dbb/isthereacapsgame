@@ -6,6 +6,8 @@ require_relative 'helpers'
 require_relative 'schedule'
 
 class Caps < Sinatra::Base
+  set :root, File.dirname(__FILE__)
+  set :public, Proc.new { File.join(root, '/public') }
 
   not_found do
     erb :boom
