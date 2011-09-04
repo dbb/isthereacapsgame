@@ -63,12 +63,13 @@ p {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, .75);
 }
 
-.home {
+.yes {
   color: rgb(166, 33, 46);
 }
 
 .away {
-  color: rgb(9, 24, 50);
+  margin-top: -75px;
+  margin-bottom: 50px;
 }
 
 footer nav {
@@ -90,4 +91,13 @@ footer nav ul li {
 footer nav ul li.last {
   padding-right: 0;
   border-right: none;
+}
+
+a:link, a:visited {
+  color: rgba(9, 24, 50, .90);
+}
+
+a:hover, a:active {
+  border-bottom: 2px solid;
+  text-decoration: none;
 }
