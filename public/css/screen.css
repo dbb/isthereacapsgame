@@ -67,7 +67,7 @@ p {
   color: rgb(166, 33, 46);
 }
 
-.away {
+.away, .bday {
   margin-top: -75px;
   margin-bottom: 50px;
 }

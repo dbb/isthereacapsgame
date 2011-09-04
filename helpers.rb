@@ -54,6 +54,10 @@ class Caps < Sinatra::Base
       return true if request.env['PATH_INFO'] == '/faq'
       return false
     end
+
+    def ovis_birthday?
+      return true if @date.strftime("%m%d") == '0917'
+    end
   end
 end
 
