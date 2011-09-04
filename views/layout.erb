@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Is there a Caps game?</title>
+    <link rel="stylesheet" href="css/normalize.css" media="screen, projection">
+    <link rel="stylesheet" href="css/screen.css" media="screen, projection">
+  </head>
+  <body>
+
+    <%= yield %>
+
+    <footer>
+      <nav>
+        <ul>
+        <% if about? %>
+          <li>About</li>
+        <% else %>
+          <li><a href="/about">About</a></li>
+        <% end %>
+        <% if faq? %>
+          <li>FAQ</li>
+        <% else %>
+          <li><a href="/faq">FAQ</a></li>
+        <% end %>
+          <li class="last"><a href="http://capitals.nhl.com/club/schedule.htm">Full Schedule</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
