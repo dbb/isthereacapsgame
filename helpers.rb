@@ -44,6 +44,16 @@ class Caps < Sinatra::Base
       today = DateTime.now.strftime("%A")
       return (today.upcase == wanted.upcase) ? "next" : ""
     end
+
+    def about?
+      return true if request.env['PATH_INFO'] == '/about'
+      return false
+    end
+
+    def faq?
+      return true if request.env['PATH_INFO'] == '/faq'
+      return false
+    end
   end
 end
 
