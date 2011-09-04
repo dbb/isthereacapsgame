@@ -22,15 +22,15 @@ class Caps < Sinatra::Base
   end
 
   get '/' do
-    erb :'today.html'
+    erb :today
   end
 
   get '/about' do
-    erb :'about.html'
+    erb :about
   end
 
   get '/faq' do
-    erb :'faq.html'
+    erb :faq
   end
 
   # Hit '/today' also looks up today
@@ -39,7 +39,7 @@ class Caps < Sinatra::Base
   end
 
   get %r{/today/?}i do
-    erb :'today.html'
+    erb :today
   end
 
   # Want '/tomorrow'?
@@ -48,7 +48,7 @@ class Caps < Sinatra::Base
   end
 
   get %r{/tomorrow/?}i do
-    erb :'tomorrow.html'
+    erb :tomorrow
   end
 
   before %r{/(\d{8})/?$} do
@@ -70,7 +70,7 @@ class Caps < Sinatra::Base
 
   days.each do |day|
     get %r/#{day}/i do
-      erb :'day.html'
+      erb :day
     end
   end
 end
